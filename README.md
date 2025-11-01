@@ -1,21 +1,48 @@
-<<<<<<< HEAD
-# elyx_digital_assessment_test
+# 🧭 Elyx Digital Assessment
 
-A new Flutter project.
+## 📱 Overview
+This Flutter application was developed as part of the **Elyx Digital Flutter Developer Assessment**.  
+It demonstrates **state management (Bloc)**, **API integration**, **dependency injection**, and **clean architecture** principles.  
 
-## Getting Started
+The app fetches user data from the public API **[https://reqres.in/api/users](https://reqres.in/api/users)** and displays them in a user-friendly interface with search, pagination, secure storage, and proper error handling.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 👤 User List Screen
+- Displays a list of users with **name** and **profile picture**.  
+- Initially loads **6 users** and automatically loads more when scrolled to the bottom (pagination).  
+- Includes **pull-to-refresh** to reload users.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# elyx-digital-assessment
-Flutter app fetching and displaying paginated users with search, caching, error handling, and clean architecture.
->>>>>>> d02826fd5fee9aecdc2372a0d13cf6ba5adfbf58
+### 📄 User Detail Screen
+- Shows complete details of the selected user:
+  - Profile picture  
+  - Name  
+  - Email  
+  - Phone (mocked for demo)  
+
+### 🔍 Search Functionality
+- Allows filtering users by name in real-time.  
+- Handles **special characters**, **spaces**, and **no result** cases smoothly.  
+
+### 🔐 Secure Storage
+- Uses **Flutter Secure Storage** to store the **API key/token** safely.
+
+### ⚙️ Error & State Handling
+- Handles all major edge cases:
+  - **No Internet Connection** → Shows proper message with retry button  
+  - **Slow API Response** → Displays loading indicator with timeout  
+  - **Empty API Response** → Shows friendly “No users found” message  
+- Manages loading, success, and error states through **Bloc**.
+
+### 🎨 UI/UX
+- Clean and responsive design that works on all screen sizes and orientations.  
+- Proper spacing, typography, and layout alignment following Flutter best practices.
+
+---
+
+## 🧩 Architecture
+
+The app follows **Clean Architecture** with proper separation of concerns — Presentation, Domain, and Data layers — and uses **GetIt** for dependency injection.
+
